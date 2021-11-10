@@ -4,7 +4,7 @@ import type { Core, Schema, SchemaDocument, SchemaObject, InvalidSchemaError } f
 export type JsonSchemaBundler = {
   add: typeof Schema.add;
   get: typeof Schema.get;
-  bundle: (schemaDoc: SchemaDocument) => Promise<SchemaObject>;
+  bundle: (schemaDoc: SchemaDocument, options?: BundleOptions) => Promise<SchemaObject>;
   setMetaOutputFormat: typeof Core.setMetaOutputFormat;
   setShouldMetaValidate: typeof Core.setShouldMetaValidate;
   FLAG: typeof Core.FLAG;
@@ -12,6 +12,10 @@ export type JsonSchemaBundler = {
   DETAILED: typeof Core.DETAILED;
   VERBOSE: typeof Core.VERBOSE;
   InvalidSchemaError: typeof InvalidSchemaError;
+};
+
+export type BundleOptions = {
+  alwaysIncludeDialect?: boolean;
 };
 
 export const add: JsonSchemaBundler["add"];

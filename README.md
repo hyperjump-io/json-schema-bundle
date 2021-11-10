@@ -101,10 +101,14 @@ import type { SchemaDocument, Draft202012Schema, InvalidSchemaError } from "@hyp
 
     Fetch a schema. Schemas can come from an HTTP request, a file, or a schema
     that was added with `add`.
-* **bundle**: (schema: SDoc) => Promise<SchemaObject>
+* **bundle**: (schema: SDoc, options: Options) => Promise<SchemaObject>
 
     Create a bundled schema starting with the given schema. External schemas
     will be fetched from the filesystem, the network, or internally as needed.
+
+    Options:
+     * alwaysIncludeDialect: boolean (default: false) | Include dialect even
+       when it isn't strictly needed
 * **setMetaOutputFormat**: (outputFormat: OutputFormat = DETAILED) => undefined
 
     Set the output format for meta-validation. Meta-validation output is only
