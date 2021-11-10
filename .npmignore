@@ -1,0 +1,5 @@
+.github/
+rollup.config.js
+.eslintrc.json
+**/*.spec.ts
+tsconfig.json

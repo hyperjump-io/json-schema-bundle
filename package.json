@@ -1,0 +1,46 @@
+{
+  "name": "@hyperjump/json-schema-bundle",
+  "version": "0.0.1",
+  "description": "A tool for bundling JSON Schema documents",
+  "main": "lib/index.js",
+  "exports": {
+    "require": "./lib/index.js",
+    "import": "./lib/index.mjs"
+  },
+  "scripts": {
+    "clean": "xargs -a .gitignore rm -rf",
+    "lint": "eslint lib",
+    "test": "mocha --require ts-node/register 'lib/**/*.spec.ts'",
+    "build": "rollup --config rollup.config.js",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": "github:hyperjump-io/json-schema-core",
+  "keywords": [
+    "JSON Schema",
+    "bundle"
+  ],
+  "author": "Jason Desrosiers <jdesrosi@gmail.com>",
+  "license": "MIT",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/jdesrosiers"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "chai": "^4.3.4",
+    "eslint": "^8.2.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "mocha": "^9.1.3",
+    "rollup": "^2.59.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
