@@ -25,6 +25,10 @@
     "type": "github",
     "url": "https://github.com/sponsors/jdesrosiers"
   },
+  "dependencies": {
+    "@hyperjump/json-schema": "^0.18.1",
+    "relateurl": "^0.2.7"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
