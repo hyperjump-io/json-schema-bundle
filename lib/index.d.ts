@@ -5,6 +5,8 @@ export type JsonSchemaBundler = {
   add: typeof Schema.add;
   get: typeof Schema.get;
   bundle: (schemaDoc: SchemaDocument, options?: BundleOptions) => Promise<SchemaObject>;
+  FULL: "full";
+  FLAT: "flat";
   setMetaOutputFormat: typeof Core.setMetaOutputFormat;
   setShouldMetaValidate: typeof Core.setShouldMetaValidate;
   FLAG: typeof Core.FLAG;
@@ -16,11 +18,16 @@ export type JsonSchemaBundler = {
 
 export type BundleOptions = {
   alwaysIncludeDialect?: boolean;
+  bundleMode?: BundleMode;
 };
+
+export type BundleMode = JsonSchemaBundler["FULL"] | JsonSchemaBundler["FLAT"];
 
 export const add: JsonSchemaBundler["add"];
 export const get: JsonSchemaBundler["get"];
 export const bundle: JsonSchemaBundler["bundle"];
+export const FULL: JsonSchemaBundler["FULL"];
+export const FLAT: JsonSchemaBundler["FLAT"];
 export const setMetaOutputFormat: JsonSchemaBundler["setMetaOutputFormat"];
 export const setShouldMetaValidate: JsonSchemaBundler["setShouldMetaValidate"];
 export const FLAG: JsonSchemaBundler["FLAG"];

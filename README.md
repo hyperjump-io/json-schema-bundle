@@ -109,6 +109,11 @@ import type { SchemaDocument, Draft202012Schema, InvalidSchemaError } from "@hyp
     Options:
      * alwaysIncludeDialect: boolean (default: false) | Include dialect even
        when it isn't strictly needed
+     * bundleMode: "flat" | "full" (default: "flat") | When bundling schemas
+       that already contain bundled schemas, "flat" mode with remove nested
+       embedded schemas and put them all in the top level `$defs`. When using
+       "full" mode, it will keep the already embedded schemas around, which will
+       result in some embedded schema duplication.
 * **setMetaOutputFormat**: (outputFormat: OutputFormat = DETAILED) => undefined
 
     Set the output format for meta-validation. Meta-validation output is only
