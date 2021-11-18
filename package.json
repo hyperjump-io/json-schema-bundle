@@ -26,13 +26,15 @@
     "url": "https://github.com/sponsors/jdesrosiers"
   },
   "dependencies": {
-    "@hyperjump/json-schema": "^0.18.3"
+    "@hyperjump/json-schema": "^0.18.3",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@types/chai": "^4.2.22",
     "@types/mocha": "^9.0.0",
+    "@types/uuid": "^8.3.3",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "chai": "^4.3.4",

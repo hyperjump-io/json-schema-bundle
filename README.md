@@ -97,23 +97,28 @@ import type { SchemaDocument, Draft202012Schema, InvalidSchemaError } from "@hyp
     Load a schema. See [JSC - $id](https://github.com/hyperjump-io/json-schema-core#id)
     and [JSC - $schema](https://github.com/hyperjump-io/json-schema-core#schema-1)
     for more information.
-* **get**: (url: URI, contextDoc?: SDoc, recursive: boolean = false) => Promise<SDoc>
+* **get**: (url: URI, contextDoc?: SDoc, recursive: boolean = false) => Promise\<SDoc>
 
     Fetch a schema. Schemas can come from an HTTP request, a file, or a schema
     that was added with `add`.
-* **bundle**: (schema: SDoc, options: Options) => Promise<SchemaObject>
+* **bundle**: (schema: SDoc, options: Options) => Promise\<SchemaObject>
 
     Create a bundled schema starting with the given schema. External schemas
     will be fetched from the filesystem, the network, or internally as needed.
 
     Options:
-     * alwaysIncludeDialect: boolean (default: false) | Include dialect even
+     * alwaysIncludeDialect: boolean (default: false) -- Include dialect even
        when it isn't strictly needed
-     * bundleMode: "flat" | "full" (default: "flat") | When bundling schemas
+     * bundleMode: "flat" | "full" (default: "flat") -- When bundling schemas
        that already contain bundled schemas, "flat" mode with remove nested
        embedded schemas and put them all in the top level `$defs`. When using
        "full" mode, it will keep the already embedded schemas around, which will
        result in some embedded schema duplication.
+     * definitionNamingStrategy: "uri" | "uuid" (default: "uri") -- By default
+       the name used in definitions for embedded schemas will match the
+       identifier of the embedded schema. This naming is unlikely to collide
+       with actual definitions, but if you want to be sure, you can use the
+       "uuid" strategy instead to be sure you get a unique name.
 * **setMetaOutputFormat**: (outputFormat: OutputFormat = DETAILED) => undefined
 
     Set the output format for meta-validation. Meta-validation output is only
