@@ -1,6 +1,6 @@
-# Hyperjump - JSON Schema Bundler
+# Hyperjump - JSON Schema Bundle
 
-JSON Schema Bundler (JSB) is built on [JSON Schema Core](https://github.com/hyperjump-io/json-schema-core).
+JSON Schema Bundle (JSB) is built on [JSON Schema Core](https://github.com/hyperjump-io/json-schema-core).
 
 * Supported JSON Schema Dialects
   * draft-04 | draft-06 | draft-07 | Draft 2019-09 | Draft 2020-12
@@ -13,7 +13,7 @@ TypeScript, and browsers.
 
 ### Node.js
 ```bash
-npm install @hyperjump/json-schema-bundler
+npm install @hyperjump/json-schema-bundle
 ```
 
 ### Browser
@@ -39,7 +39,7 @@ out.
 
 ## Usage
 ```javascript
-const Bundler = require("@hyperjump/json-schema-bundler");
+const Bundler = require("@hyperjump/json-schema-bundle");
 
 
 // Optionally load schema manually
@@ -64,8 +64,8 @@ TypeScript support. The following example shows the types you might want to
 know.
 
 ```typescript
-import Bundler from "@hyperjump/json-schema-bundler";
-import type { SchemaDocument, Draft202012Schema, InvalidSchemaError } from "@hyperjump/json-schema-bundler";
+import Bundler from "@hyperjump/json-schema-bundle";
+import type { SchemaDocument, Draft202012Schema, InvalidSchemaError } from "@hyperjump/json-schema-bundle";
 
 
 (async function () {

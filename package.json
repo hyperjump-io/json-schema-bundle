@@ -14,7 +14,7 @@
     "build": "rollup --config rollup.config.js",
     "prepublishOnly": "npm run build"
   },
-  "repository": "github:hyperjump-io/json-schema-core",
+  "repository": "github:hyperjump-io/json-schema-bundle",
   "keywords": [
     "JSON Schema",
     "bundle"
