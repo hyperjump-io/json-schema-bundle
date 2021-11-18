@@ -1,6 +1,6 @@
 {
   "name": "@hyperjump/json-schema-bundle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tool for bundling JSON Schema documents",
   "main": "lib/index.js",
   "exports": {
