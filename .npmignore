@@ -2,4 +2,8 @@
 rollup.config.js
 .eslintrc.json
 **/*.spec.ts
+lib/fixtures/
+lib/tests/
 tsconfig.json
+worksheet.js
+worksheet.ts
