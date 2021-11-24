@@ -1,9 +1,20 @@
 # Hyperjump - JSON Schema Bundle
 
+JSON Schema Bundle (JSB) is an implementation of the official JSON Schema
+bundling process introduced in the Draft 2020-12 specification. Given a schema
+with external references, any external schemas will be embedded in the schema
+resulting in a Compound Schema Document with all the schemas necessary to
+evaluate the given schema.
+
+The bundling process allows schemas to be embedded without needing to modify any
+references which means you get the same output details whether you validate the
+bundle or the original unbundled schemas.
+
 JSON Schema Bundle (JSB) is built on [JSON Schema Core](https://github.com/hyperjump-io/json-schema-core).
 
 * Supported JSON Schema Dialects
   * draft-04 | draft-06 | draft-07 | Draft 2019-09 | Draft 2020-12
+  * Support for custom dialects can be configured
 * Schemas can reference other schemas using a different draft
 * Load schemas from filesystem (file://), network (http(s)://), or JavaScript
 
