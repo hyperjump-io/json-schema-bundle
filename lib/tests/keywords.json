@@ -550,6 +550,37 @@
     }
   },
   {
+    "description": "Bundle schema from tuple items 2019-09",
+    "schema": {
+      "$id": "https://bundler.hyperjump.io/main",
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+
+      "items": [{ "$ref": "/string" }]
+    },
+    "externalSchemas": [
+      {
+        "$id": "https://bundler.hyperjump.io/string",
+        "$schema": "https://json-schema.org/draft/2019-09/schema",
+
+        "type": "string"
+      }
+    ],
+    "bundledSchema": {
+      "$id": "https://bundler.hyperjump.io/main",
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+
+      "items": [{ "$ref": "/string" }],
+
+      "$defs": {
+        "https://bundler.hyperjump.io/string": {
+          "$id": "https://bundler.hyperjump.io/string",
+
+          "type": "string"
+        }
+      }
+    }
+  },
+  {
     "description": "Bundle schema from items",
     "schema": {
       "$id": "https://bundler.hyperjump.io/main",
