@@ -17,7 +17,16 @@
   "repository": "github:hyperjump-io/json-schema-bundle",
   "keywords": [
     "JSON Schema",
-    "bundle"
+    "json-schema",
+    "jsonschema",
+    "schema",
+    "bundle",
+    "bundler",
+    "$ref",
+    "external",
+    "reference",
+    "Compound Schema Document",
+    "embedded"
   ],
   "author": "Jason Desrosiers <jdesrosi@gmail.com>",
   "license": "MIT",
