@@ -130,6 +130,8 @@ import type { SchemaDocument, Draft202012Schema, InvalidSchemaError } from "@hyp
        identifier of the embedded schema. This naming is unlikely to collide
        with actual definitions, but if you want to be sure, you can use the
        "uuid" strategy instead to be sure you get a unique name.
+     * externalSchemas: string[] (default: []) -- A list of schemas URIs that
+       are available externally and should not be included in the bundle.
 * **setMetaOutputFormat**: (outputFormat: OutputFormat = DETAILED) => undefined
 
     Set the output format for meta-validation. Meta-validation output is only
