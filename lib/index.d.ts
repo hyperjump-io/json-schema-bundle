@@ -22,6 +22,7 @@ export type BundleOptions = {
   alwaysIncludeDialect?: boolean;
   bundleMode?: BundleMode;
   definitionNamingStrategy: DefinitionNamingStrategy;
+  externalSchemas: string[];
 };
 
 export type BundleMode = JsonSchemaBundler["FULL"] | JsonSchemaBundler["FLAT"];
