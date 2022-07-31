@@ -35,7 +35,7 @@
     "url": "https://github.com/sponsors/jdesrosiers"
   },
   "dependencies": {
-    "@hyperjump/json-schema": "^0.20.0",
+    "@hyperjump/json-schema": "^0.22.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
