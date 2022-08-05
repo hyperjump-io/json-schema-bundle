@@ -16,6 +16,38 @@
     }
   },
   {
+    "description": "Anchors",
+    "schema": {
+      "$id": "https://bundler.hyperjump.io/main",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+      "$anchor": "foo",
+      "$dynamicAnchor": "bar",
+
+      "type": "string",
+
+      "allOf": [{
+        "$anchor": "aaa",
+        "$dynamicAnchor": "bbb"
+      }]
+    },
+    "externalSchemas": [],
+    "bundledSchema": {
+      "$id": "https://bundler.hyperjump.io/main",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+      "$anchor": "foo",
+      "$dynamicAnchor": "bar",
+
+      "type": "string",
+
+      "allOf": [{
+        "$anchor": "aaa",
+        "$dynamicAnchor": "bbb"
+      }]
+    }
+  },
+  {
     "description": "One external reference",
     "schema": {
       "$id": "https://bundler.hyperjump.io/main",
