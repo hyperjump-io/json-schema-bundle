@@ -1,3 +1,5 @@
+# THIS FUNCTIONALITY HAS MOVED TO [@hyperjump/json-schema](https://github.com/hyperjump-io/json-schema#bundling)
+
 # Hyperjump - JSON Schema Bundle
 
 JSON Schema Bundle (JSB) is an implementation of the official JSON Schema
